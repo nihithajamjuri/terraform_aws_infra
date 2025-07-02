@@ -1,4 +1,4 @@
-output "ece_instance_ids" {
+output "ec2_instance_ids" {
   description = "List of EC2 instance IDs"
   value       = aws_instance.app_server[*].id
 }
