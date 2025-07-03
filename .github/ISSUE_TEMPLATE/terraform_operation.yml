@@ -1,0 +1,42 @@
+name: 📦 Terraform Operation Request
+description: Use this template to request a Terraform action
+title: "[Terraform]: "
+labels: ["terraform"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧱 Terraform Action Request
+        Please fill out the following details for this Terraform execution request.
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Which environment is this for?
+      options:
+        - dev
+        - staging
+        - prod
+    validations:
+      required: true
+
+  - type: dropdown
+    id: plan_only
+    attributes:
+      label: Run Plan Only?
+      description: Should this issue trigger only a `terraform plan` (no apply)?
+      options:
+        - true
+        - false
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / Notes
+      description: Provide any additional context, variables, or modules to apply.
+      placeholder: "e.g. Apply VPC module only, use workspace `dev`, etc."
