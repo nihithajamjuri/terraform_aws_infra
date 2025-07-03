@@ -29,8 +29,8 @@ body:
       label: Run Plan Only?
       description: Should this issue trigger only a `terraform plan` (no apply)?
       options:
-        - true
-        - false
+        - "true"
+        - "false"
     validations:
       required: true
 
